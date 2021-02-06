@@ -6,6 +6,7 @@ public class Prime {
 	public static void main(String[] args) {
 		//enter number
 		
+		//commit 2
 		//loop through the possible multiples of number
 		//compare multiple with number
 		//stop if it is a multiple, print not prime
