@@ -5,6 +5,7 @@ public class Prime {
 
 	public static void main(String[] args) {
 		//Enter a number and print a message if it is prime or not
+		//Test if push worked
 		Scanner scanner = new Scanner(System.in);
 		System.out.print("Enter a number:  ");
 		int myNumber = scanner.nextInt();
