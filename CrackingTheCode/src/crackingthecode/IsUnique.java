@@ -24,6 +24,9 @@ public class IsUnique {
 		System.out.println("String has all unique characters");*/
 		//The first loop stores one value so its constant
 		//The second loop compares n-1 then n-2 then n-3 etc
+		//This looks like n^2
+		//The better approach would be to sort first then use implementation below
+		//Since that would be nlogn + n-1 which would be nlogn
 		
 		
 		//Assume we had a sorted array
@@ -36,6 +39,8 @@ public class IsUnique {
 		}
 		System.out.println("String has all unique characters");
 		//This one does n-1 comparisions so runtime is big of n
+		
+		
 		
 		
 		
