@@ -9,7 +9,7 @@ public class PalinPerm {
 		1.6
 		EXAMPLE
 		Input: Tact Coa
-		Output: True (permutations: "taco cat", "atco eta", etc.) */
+		Output: True (permutations: "taco cat", "atco eta", etc.) *///
 	}
 
 }
