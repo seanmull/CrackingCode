@@ -12,6 +12,7 @@ public class OneAway {
 		pale, bale -> true
 		pale, bake -> false*/
 		//s
+		//Check
 
 
 	}
