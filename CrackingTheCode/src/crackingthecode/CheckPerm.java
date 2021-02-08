@@ -9,7 +9,7 @@ public class CheckPerm {
 		//test1
 		/*Check Permutation: Given two strings, write a method to decide if one is a permutation of the
 		other. */
-		//test
+		//tes
 		String s1 = "sag";
 		String s2 = "gas";
 		
