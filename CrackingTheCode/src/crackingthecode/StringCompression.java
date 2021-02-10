@@ -17,10 +17,29 @@ public class StringCompression {
 		//Create empty list
 		ArrayList<String> elist = new ArrayList<String>();
 		
-		for(int i = 0; i < s.length(); i++) {
-
-			//(s.charAt(i));
+		int counter = 1;
+		for(int i = 0; i < s.length() - 1; i++) {
+			if(slist.get(i).equals(slist.get(i+1))) {
+				counter++;
+			}else{
+				elist.add(slist.get(i));
+				elist.add(Integer.toString(counter));
+				counter = 1;
+			}
+			if(i == s.length() - 2) {
+				elist.add(slist.get(i));
+				elist.add(Integer.toString(counter));
+			}
 		}
+		
+		String s2 = String.join("", elist);
+		System.out.println(s2);
+		
+		//Converting the string to List is N runtime
+		//Iterating through List is N runtime
+		//Not sure about the .join method if the strings are immutable runtime will be bad
+	
+		
 
 		
 	}
