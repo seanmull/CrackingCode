@@ -1,4 +1,4 @@
-package crackingthecode;
+package arraysAndStrings;
 
 public class URLify {
 

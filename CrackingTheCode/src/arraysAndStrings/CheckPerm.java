@@ -1,4 +1,4 @@
-package crackingthecode;
+package arraysAndStrings;
 
 import java.util.Arrays;
 import java.util.LinkedList;
