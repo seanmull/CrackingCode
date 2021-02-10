@@ -10,6 +10,21 @@ public class URLify {
 		EXAMPLE
 		Input: "Mr John Smith ", 13
 		Output: "Mr%20John%20Smith" *///
+		String s = "Mr John Smith ";
+		
+		char[] a = s.toCharArray();
+		String[] convertedArray = new String[a.length];
+		
+		for(int i = 0; i < s.length(); i++) {
+			if(a[i] == ' ') {
+				convertedArray[i] = "%20";
+			}else{
+				convertedArray[i] = Character.toString(a[i]);
+			}
+		}
+		System.out.println(String.join("", convertedArray));
+		
+	
 	}
 
 }
