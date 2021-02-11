@@ -2,17 +2,23 @@ Understand if you can used API or not
 
 Develop a plan how to handle each item
 Current plan
-	Study the concepts
-	Study how to implement arrays and strings in Java
-	Do 10 good easier (common) problems to practice other concepts such as big 0
-		Go to Leetcode
+	Do some easy (common) problems to practice other concepts such as big 0
+		Two sum
+		Remove Duplicates
+		Max subarray
+		Plus one
+		Merge sorted array
+		Majority element
+		Missing number
+		Move Zeros
 	Try some medium problems just to get an idea where my limits are
 
 In work
-	Arrays & Strings
+	Arrays
 
 Source - https://www.alimirio.com/posts/read-this-before-you-start-solving-problems-on-leetcode-prep-work
 Data Structures
+	Strings
 	Dynamic Array
 	Linked List
 	Stack & Queue
