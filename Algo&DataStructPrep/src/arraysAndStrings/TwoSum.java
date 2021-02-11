@@ -1,5 +1,7 @@
 package arraysAndStrings;
 
+import java.util.Arrays;
+
 public class TwoSum {
 
 	public static void main(String[] args) {
@@ -22,6 +24,30 @@ public class TwoSum {
 
 		Input: nums = [3,3], target = 6
 		Output: [0,1]*/
+		
+		//Assume unsorted, cannot use the same element, one solution
+		//Brute force implementation
+		int[] nums = new int[] {2,7,11,15};
+		int target = 9;
+		int[] output = new int[2];
+		
+		for(int i = 0; i < nums.length; i++) {
+			for(int j =0; j < nums.length; j++) {
+				if(j == i) break; //insures not same element
+				if(nums[i] + nums[j] == target) {
+					output[0] = i;
+					output[1] = j;
+					System.out.println(Arrays.toString(output));
+					System.exit(0);
+				}
+			}
+		}
+		//Runtime is pretty bad with each loop going through each element so O(n^2)
+		//Space usage is constant.
+		
+		//
+
+		
 
 	}
 
