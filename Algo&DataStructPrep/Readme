@@ -1,8 +1,8 @@
-Compare other plans to get an idea of priorities maybe rank them a 
-bit
+Understand if you can used API or not
 
 Develop a plan how to handle each item
 Current plan
+	Study the concepts
 	Study how to implement arrays and strings in Java
 	Do 10 good easier (common) problems to practice other concepts such as big 0
 		Go to Leetcode
@@ -11,6 +11,7 @@ Current plan
 In work
 	Arrays & Strings
 
+Source - https://www.alimirio.com/posts/read-this-before-you-start-solving-problems-on-leetcode-prep-work
 Data Structures
 	Dynamic Array
 	Linked List

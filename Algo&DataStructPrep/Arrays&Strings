@@ -1,11 +1,49 @@
+Some basic concepts
+Strings - https://en.wikipedia.org/wiki/String_(computer_science)
+- String are often implemented as a array of characters(char). 
+- The char can be usually encoded as ASCII(256) or UNICODE.
+- They are immutable in Java.  Which mean they cannot be changed.
+- Instant access to individual elements is allowed.
+- String builder can used to append strings by using a resizeable array
+   
+Arrays
+- Stored in a contiguous chunk of memory.
+- Normal arrays are set in size.  In other words they are static.
+- Can be made of many data types int, char, string etc. 
+
+Strengths
+-Simple data structures.  Can build almost anything with it.
+-Allows instant 0(1) time for lookup.
+
+Weaknesses
+-Strings are immutable which means each time you append you have to copy. Which is 0(n^2) time.
+-Arrays are of fixed size.
+-Filling an array is O(n) time.
+
 How to implement Arrays and Strings in Java
 
 Strings
 
+//For making a simple string
+String s = "abc";
+
+//To make a char array
+char[] charArray = s.toCharArray();
+
+//To index a string
+s[0] -> 'a' //note '' means char "" means string
+
+//Stringbuilder
+
+
 Arrays
 
-Some basic concepts
+//To build a 1-D array
 
-Strengths
+//To build a 2-D array
 
-Weaknesses
+//Typical type implementations
+
+//
+
+
