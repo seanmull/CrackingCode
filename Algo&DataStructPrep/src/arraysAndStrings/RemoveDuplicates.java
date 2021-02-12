@@ -1,5 +1,7 @@
 package arraysAndStrings;
 
+import java.util.Arrays;
+
 public class RemoveDuplicates {
 
 	public static void main(String[] args) {
@@ -36,6 +38,26 @@ public class RemoveDuplicates {
 		Output: 5, nums = [0,1,2,3,4]
 		Explanation: Your function should return length = 5, with the first five elements of nums being modified to 0, 1, 2, 3, and 4 respectively. 
 		It doesn't matter what values are set beyond the returned length.*/
+		
+		//Assumptions array is sorted, No new array is made, return length of new array
+		
+		int[] nums = new int[] {0,0,1,1,1,2,2,3,3,4,4} ;
+		
+		int indexForAdjustedArray = 0;
+		
+		for(int i = 0; i < nums.length - 1; i++) {
+			if(nums[i] != nums[i+1]) {
+				indexForAdjustedArray++;
+				nums[indexForAdjustedArray] = nums[i+1];
+			}
+		}
+		System.out.println(Arrays.toString(nums));
+		System.out.println("New Length of Array is " + (indexForAdjustedArray + 1));
+		
+		//Runtime is 0(n) since it touches every number
+		//Space is 0(1) since no new array is made
+		
+		
 
 	}
 

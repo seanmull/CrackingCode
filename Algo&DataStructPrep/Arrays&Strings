@@ -57,4 +57,7 @@ float[] array6;
 String[] array7;
 boolean[] array8;
 
+//Useful for printing arrays
+System.out.println(Arrays.toString(output));
+
 
