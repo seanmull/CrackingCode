@@ -48,7 +48,7 @@ public class TwoSum {
 		//A better implementation would take into account repeats since both 2 + 7 
 		//and 7 + 2 are the same thing
 		for(int i = 0; i < nums.length; i++) {
-			for(int j = (i+1); j < nums.length; j++) {
+			for(int j = (i+1); j < nums.length - 1; j++) {
 				if(nums[i] + nums[j] == target) {
 					output[0] = i;
 					output[1] = j;
