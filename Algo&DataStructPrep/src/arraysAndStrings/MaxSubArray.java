@@ -67,7 +67,7 @@ public class MaxSubArray {
 		
 		//This is O(n^3) in terms of space if we store all the arrays
 		//It is O(n^2) in terms of space if we just collect the sums
-		//Runtime is difficult to quantify, not every value is calculated.
+		//Runtime is 0(n^3) since every number has to be touched when summing them even the zero.
 		//I suspect there is a better implementation since alot of subarrays are zero.
 
 	}
