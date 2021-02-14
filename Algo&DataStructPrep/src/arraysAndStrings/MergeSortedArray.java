@@ -3,9 +3,12 @@ package arraysAndStrings;
 public class MergeSortedArray {
 
 	public static void main(String[] args) {
-		/*Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
+		/*Given two sorted integer arrays nums1 and nums2, 
+		 * merge nums2 into nums1 as one sorted array.
 
-		The number of elements initialized in nums1 and nums2 are m and n respectively. You may assume that nums1 has a size equal to m + n such that it has enough space to hold additional elements from nums2.
+		The number of elements initialized in nums1 and nums2 are m and n respectively.
+		 You may assume that nums1 has a size equal to m + n such that it has enough 
+		 space to hold additional elements from nums2.
 
 		Example 1:
 
@@ -15,6 +18,17 @@ public class MergeSortedArray {
 
 		Input: nums1 = [1], m = 1, nums2 = [], n = 0
 		Output: [1]
+		
+		//First create non-zeroed arrays
+		//Create larger empty array based on total size of both
+		//Initialize position of both arrays
+		//Loop through this larger array
+			//if num1 is larger
+				//pull num2
+				//increment its index
+			//if num2 is larger
+				//pull num1
+				//increment it index
 		 
 
 		Constraints:
