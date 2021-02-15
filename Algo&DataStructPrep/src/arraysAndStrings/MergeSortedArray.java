@@ -42,28 +42,22 @@ public class MergeSortedArray {
 		int number2NonZeroCount = 0;
 		for (int i = 0; i < nums1.length; i++) if (nums1[i] != 0) number1NonZeroCount++;
 		for (int j = 0; j < nums2.length; j++) if (nums2[j] != 0) number2NonZeroCount++;
-		//System.out.println(number1NonZeroCount);
-		//System.out.println(number2NonZeroCount);
 		int nums1NonZero[] = new int[number1NonZeroCount];
 		int nums2NonZero[] = new int[number2NonZeroCount];
 		int nums1NonZeroIndex = 0;
 		int nums2NonZeroIndex = 0;
 		for (int i = 0; i < nums1.length; i++) {
-			System.out.println(nums1NonZeroIndex + " " + i + " " + nums1NonZero[nums1NonZeroIndex] + " " + nums1[i]);
 			if (nums1[i] != 0) {
 				nums1NonZero[nums1NonZeroIndex] = nums1[i];
 				nums1NonZeroIndex++;
 			}
 		}
-		for (int j = 0; j < number2NonZeroCount; j++) {
+		for (int j = 0; j < nums2.length; j++) {
 			if (nums2[j] != 0) {
 				nums2NonZero[nums2NonZeroIndex] = nums2[j];
 				nums2NonZeroIndex++;
 			}
 		}
-		//System.out.println(Arrays.toString(nums1NonZero));
-		//System.out.println(Arrays.toString(nums2NonZero));
-		
 		//Create larger empty array based on total size of both
 		int[] mergedArray = new int[number1NonZeroCount + number2NonZeroCount];
 		//Initialize position of both arrays
@@ -89,9 +83,14 @@ public class MergeSortedArray {
 				num1Index++;
 			}
 		}
-		//System.out.println(num1Index);
-		//System.out.println(num2Index);
-		//System.out.println(Arrays.toString(mergedArray));
+		System.out.println(num1Index);
+		System.out.println(num2Index);
+		System.out.println(Arrays.toString(mergedArray));
+		
+		//Runtime is O(n + m) for the non-Zeroing and merging
+		//Space is also O(n + m) since we are creating an array that is n+m in size
+		//Big problem with this one is that problem states sorted array however has zeros 
+		//That need to be ignored.  I'm assuming these were mis-sized arrays.
 		
 		
 		
