@@ -1,5 +1,7 @@
 package arraysAndStrings;
 
+import java.util.Arrays;
+
 public class MergeSortedArray {
 
 	public static void main(String[] args) {
@@ -19,16 +21,9 @@ public class MergeSortedArray {
 		Input: nums1 = [1], m = 1, nums2 = [], n = 0
 		Output: [1]
 		
-		//First create non-zeroed arrays
-		//Create larger empty array based on total size of both
-		//Initialize position of both arrays
-		//Loop through this larger array
-			//if num1 is larger
-				//pull num2
-				//increment its index
-			//if num2 is larger
-				//pull num1
-				//increment it index
+		
+		
+
 		 
 
 		Constraints:
@@ -38,6 +33,73 @@ public class MergeSortedArray {
 		0 <= m, n <= 200
 		1 <= m + n <= 200
 		-109 <= nums1[i], nums2[i] <= 109*/
+		
+		
+		int[] nums1 = new int[] {0,1,5,8,92,0,0,0};
+		int[] nums2 = new int[] {0,0,0,0,1,2,3,3};
+		//Create new arrays without Zeros
+		int number1NonZeroCount = 0;
+		int number2NonZeroCount = 0;
+		for (int i = 0; i < nums1.length; i++) if (nums1[i] != 0) number1NonZeroCount++;
+		for (int j = 0; j < nums2.length; j++) if (nums2[j] != 0) number2NonZeroCount++;
+		//System.out.println(number1NonZeroCount);
+		//System.out.println(number2NonZeroCount);
+		int nums1NonZero[] = new int[number1NonZeroCount];
+		int nums2NonZero[] = new int[number2NonZeroCount];
+		int nums1NonZeroIndex = 0;
+		int nums2NonZeroIndex = 0;
+		for (int i = 0; i < nums1.length; i++) {
+			System.out.println(nums1NonZeroIndex + " " + i + " " + nums1NonZero[nums1NonZeroIndex] + " " + nums1[i]);
+			if (nums1[i] != 0) {
+				nums1NonZero[nums1NonZeroIndex] = nums1[i];
+				nums1NonZeroIndex++;
+			}
+		}
+		for (int j = 0; j < number2NonZeroCount; j++) {
+			if (nums2[j] != 0) {
+				nums2NonZero[nums2NonZeroIndex] = nums2[j];
+				nums2NonZeroIndex++;
+			}
+		}
+		//System.out.println(Arrays.toString(nums1NonZero));
+		//System.out.println(Arrays.toString(nums2NonZero));
+		
+		//Create larger empty array based on total size of both
+		int[] mergedArray = new int[number1NonZeroCount + number2NonZeroCount];
+		//Initialize position of both arrays
+		int num1Index = 0;
+		int num2Index = 0;
+		//Loop through this larger array
+		for(int k = 0; k < mergedArray.length; k++) {
+			if(num1Index > number1NonZeroCount -1) { //deal with situation where we are at end of nums array
+				mergedArray[k] = nums2NonZero[num2Index];
+				num2Index++;
+				continue;
+			}
+			if(num2Index > number2NonZeroCount - 1) {
+				mergedArray[k] = nums1NonZero[num1Index];
+				num1Index++;
+				continue;
+			}
+			if(nums1NonZero[num1Index] > nums2NonZero[num2Index]) { //deal with beginning of merge
+				mergedArray[k] = nums2NonZero[num2Index];
+				num2Index++;
+			}else{
+				mergedArray[k] = nums1NonZero[num1Index];
+				num1Index++;
+			}
+		}
+		//System.out.println(num1Index);
+		//System.out.println(num2Index);
+		//System.out.println(Arrays.toString(mergedArray));
+		
+		
+		
+		
+		
+		
+		
+
 
 	}
 
