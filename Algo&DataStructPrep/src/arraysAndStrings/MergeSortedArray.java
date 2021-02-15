@@ -45,7 +45,7 @@ public class MergeSortedArray {
 		int nums1NonZero[] = new int[number1NonZeroCount];
 		int nums2NonZero[] = new int[number2NonZeroCount];
 		int nums1NonZeroIndex = 0;
-		int nums2NonZeroIndex = 0;
+		int nums2NonZeroIndex = 0;   
 		for (int i = 0; i < nums1.length; i++) {
 			if (nums1[i] != 0) {
 				nums1NonZero[nums1NonZeroIndex] = nums1[i];
