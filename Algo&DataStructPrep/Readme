@@ -3,7 +3,6 @@ Understand if you can used API or not
 Develop a plan how to handle each item
 Current plan
 	Do some easy (common) problems to practice other concepts such as big 0
-		Missing number
 		Move Zeros
 		Plus one
 		ContainsDuplicate
@@ -12,11 +11,18 @@ Current plan
 
 In work
 	Arrays
+	
+Planned firing order
+	Strings
+	Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
+	Stability in Sorting
+	Mergesort
+	Quicksort
+	Dynamic Array	
+	Implement an ArrayList from scratch
 
 Source - https://www.alimirio.com/posts/read-this-before-you-start-solving-problems-on-leetcode-prep-work
 Data Structures
-	Strings
-	Dynamic Array
 	Linked List
 	Stack & Queue
 	Hash Tables
@@ -26,10 +32,6 @@ Data Structures
 	Trie
 	
 Algorithms
-	Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
-	Stability in Sorting
-	Mergesort
-	Quicksort
 	Heapsort — Sort it in-place to get O(1) space
 	Binary Search
 	Selections — Kth Smallest Elements (Sort, QuickSelect, Mediums of Mediums) — Implement all three ways
@@ -50,7 +52,6 @@ Algorithms
 	Once you are comfortable with the data structures & algorithms above, do the following exercise multiple times (at least 2–3 times) until you can do them with your eyes closed.
 
 To do tasks
-	Implement an ArrayList from scratch
 	Reverse a linked list
 	Implement a Stack & a Queue using Array
 	Implement a HashTable with simple Hashing functions
