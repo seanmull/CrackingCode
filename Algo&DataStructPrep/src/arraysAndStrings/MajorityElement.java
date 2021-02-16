@@ -24,24 +24,21 @@ public class MajorityElement {
 		-2^31 <= nums[i] <= 2^31 - 1
 				 
 		Follow-up: Could you solve the problem in linear time and in O(1) space?*/
-		int nums[] = new int[] {2,2,1,1,1,2,2};
+		
+		int nums[] = new int[] {3,2,3};
+		int repeatedNumber = 0;
+		int repeatedNumberCount = 0;
 		//First do the brute force solution
-		int count = 0;
-		for(int i = 0; i < nums.length; i++) {
-			for(int j = 0; j < nums.length - 1; j++) {
-				if(nums[i] == nums[j]) count++;
-				if(count > nums.length/2) {
-					System.out.println(nums[i]);
-					break;
-				}
+		for(int i = 0;i < nums.length; i++) {
+			repeatedNumberCount = 0;
+			repeatedNumber = nums[i];  
+			for(int j = i + 1; j < nums.length; j++) if(repeatedNumber == nums[j]) repeatedNumberCount++;
+			if(repeatedNumberCount + 1 > (nums.length/2)) {
+				System.out.println("The majority element is " + repeatedNumber);
+				System.exit(0);
 			}
 		}
-		//Do one loop to track the nums position
-			//Do another loop to track the comparision position
-				//If match increment count
-				//If count greater then n/2
-					//Print current number and break
-		
+		//This is O(1) space but n * n -1 time which makes it O(n^2) runtime
 		
 		//Then try the follow-up
 
