@@ -13,6 +13,12 @@ public class MoveZeros {
 
 		You must do this in-place without making a copy of the array.
 		Minimize the total number of operations.*/
+		
+		//Count the number of zeros
+		//Loop through length minus numofZeros
+			//Overwrite the first values
+		//Loop through numofZeros
+			//Overwrite the last values
 
 	}
 
