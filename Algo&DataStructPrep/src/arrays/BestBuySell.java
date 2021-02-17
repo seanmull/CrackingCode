@@ -35,7 +35,7 @@ public class BestBuySell {
 		
 		for(int buyDay = 0; buyDay < prices.length; buyDay++) 
 			for(int sellDay = buyDay + 1; sellDay < prices.length; sellDay++) 
-				profits[buyDay * sellDay] = prices[sellDay] - prices[buyDay];
+				profits[(buyDay + 1) * sellDay] = prices[sellDay] - prices[buyDay];
 		
 		for(int profit : profits) if(profit > maxProfit) maxProfit = profit;
 		
