@@ -31,11 +31,12 @@ public class BestBuySell {
 		
 		int prices[] = new int[] {7,6,4,3,1};
 		int profits[] = new int[prices.length * prices.length];
+		int profitIndex = 0;
 		int maxProfit = 0;
 		
 		for(int buyDay = 0; buyDay < prices.length; buyDay++) 
 			for(int sellDay = buyDay + 1; sellDay < prices.length; sellDay++) 
-				profits[(buyDay + 1) * sellDay] = prices[sellDay] - prices[buyDay];
+				profits[profitIndex] = prices[sellDay] - prices[buyDay]; profitIndex++;
 		
 		for(int profit : profits) if(profit > maxProfit) maxProfit = profit;
 		

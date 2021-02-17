@@ -42,19 +42,19 @@ public class ContainMostWater {
 		int areas[] = new int[height.length * height.length];
 		int maxArea = 0;
 		int lowerHeight;
+		int areasIndex = 0;
 		
 		for(int startIndex = 0; startIndex < height.length - 1; startIndex++)
 			for(int endIndex = startIndex + 1; endIndex < height.length; endIndex++) {
-				if(height[startIndex] >= height[endIndex]) {
-					lowerHeight = height[endIndex];
-				}else {
-					lowerHeight = height[startIndex];
-				}
-				areas[startIndex * endIndex] = lowerHeight * (endIndex - startIndex);
+				lowerHeight = (height[startIndex] >= height[endIndex]) ? height[endIndex] : height[startIndex];
+				areas[areasIndex] = lowerHeight * (endIndex - startIndex);
+				areasIndex++;
 			}
 		for(int area : areas) if (area > maxArea) maxArea = area;
 		
 		System.out.println("The maximum area of water is " + maxArea);
+		
+		//Runtime and space are both 0(n^2) if we ignore constraints.
 	}
 
 }
