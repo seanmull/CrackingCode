@@ -4,7 +4,8 @@ public class BestBuySell {
 	public static void main(String[] args) {
 		/*You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
-		You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+		You want to maximize your profit by choosing a single day to buy one stock and choosing a 
+		different day in the future to sell that stock.
 
 		Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
 
@@ -27,6 +28,20 @@ public class BestBuySell {
 
 		1 <= prices.length <= 105
 		0 <= prices[i] <= 104*/
+		
+		int prices[] = new int[] {7,6,4,3,1};
+		int profits[] = new int[prices.length * prices.length];
+		int maxProfit = 0;
+		
+		for(int buyDay = 0; buyDay < prices.length; buyDay++) 
+			for(int sellDay = buyDay + 1; sellDay < prices.length; sellDay++) 
+				profits[buyDay * sellDay] = prices[sellDay] - prices[buyDay];
+		
+		for(int profit : profits) if(profit > maxProfit) maxProfit = profit;
+		
+		System.out.println("The max profit is " + maxProfit);
+		
+		//Run time and memory space is 0(n^2) if we ignore constraints. 
 	}
 
 }
