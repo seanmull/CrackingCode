@@ -1,5 +1,7 @@
 package arraysAndStrings;
 
+import java.util.Arrays;
+
 public class PlusOne {
 
 	public static void main(String[] args) {
@@ -31,6 +33,12 @@ public class PlusOne {
 
 		1 <= digits.length <= 100
 		0 <= digits[i] <= 9*/
+		
+		int[] digits = new int[] {1,2,3};
+		digits[digits.length - 1] = digits[digits.length - 1] + 1;
+		System.out.println(Arrays.toString(digits));
+		
+		//Runtime and space is 0(1);
 
 	}
 
