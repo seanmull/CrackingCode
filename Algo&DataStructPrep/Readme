@@ -2,9 +2,21 @@ Understand if you can used API or not
 
 Develop a plan how to handle each item
 Current plan
-	Do some easy (common) problems to practice other concepts such as big 0
-		BestBuySell
 	Try some medium problems
+		Container with most Water
+		3Sum
+		Search for Rotated Sorted Array
+		Find first and last position in sorted array
+		Rotate image
+		Spiral matrix
+		Jump Game
+		Unique Paths
+		Merge Intervals
+		Set Matrix Zeros
+		Sort Colors
+		SubSets
+		Word Search
+	Do a few Hard Problems...Maybe.
 
 In work
 	Arrays

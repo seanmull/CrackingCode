@@ -1,4 +1,4 @@
-package arraysAndStrings;
+package arrays;
 
 public class BestBuySell {
 	public static void main(String[] args) {
