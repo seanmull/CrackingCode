@@ -5,7 +5,8 @@ public class RotateImage {
 	public static void main(String[] args) {
 		/*You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
 
-		You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
+		You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. 
+		DO NOT allocate another 2D matrix and do the rotation.
 
 		Example 1:
 
@@ -33,6 +34,14 @@ public class RotateImage {
 		matrix[i].length == n
 		1 <= n <= 20
 		-1000 <= matrix[i][j] <= 1000*/
+		
+		//Loop through the n/2 layers
+			//Loop through the elements from 0 to n in the layer
+				//Store one element
+				//Move the top side
+				//Move the right side
+				//Move the bottom
+				//Move the left side
 
 	}
 
