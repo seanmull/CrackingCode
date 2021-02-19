@@ -15,7 +15,7 @@ public class SearchRotatedSortedArray {
 
 		Example 1:
 
-		Input: nums = [4,5,6,7,0,1,2], target = 0 the target is the index before the rotation
+		Input: nums = [4,5,6,7,0,1,2], target = 0 the target is element (0,4),(1,5),(2,6),(4
 		Output: 4
 		Example 2:
 
@@ -38,6 +38,38 @@ public class SearchRotatedSortedArray {
 
 		Follow up: Can you achieve this in O(log n) time complexity?
 		*/
+		
+		//TODO its not clear what is expected since they are just asking for index after
+		//rotation, why not just loop throught the array and return index.
+		
+		int nums[] = new int[] {4,5,6,7,0,1,2};
+		int target = 0; //output should be 4
+		boolean isTargetInNums = false;
+		int pivotIndex = 0;
+		int indexOfUnrotatedArray;
+		
+		//Find if number is in array
+		for(int i = 0; i < nums.length; i++) if(nums[i] == target) isTargetInNums = true;
+		
+		if(!isTargetInNums) {
+			System.out.println(-1); System.exit(0);
+		}
+		
+		//Compare number to next
+		for(int i = 0; i < nums.length - 1; i++)
+			if(nums[i] > nums[i+1]) pivotIndex = i;
+		
+		indexOfUnrotatedArray = pivotIndex;
+
+		for(int i = 0; i < nums.length; i++) {
+			System.out.println(nums[i] + " " + indexOfUnrotatedArray + " " + i);
+			if(nums[i] == target) {
+				System.out.println(indexOfUnrotatedArray); 
+				System.exit(0);
+			}
+			indexOfUnrotatedArray++;
+			if(indexOfUnrotatedArray == nums.length) indexOfUnrotatedArray = 0;
+		}
 	}
 
 }
