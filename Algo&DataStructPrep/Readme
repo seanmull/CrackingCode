@@ -3,7 +3,6 @@ Understand if you can used API or not
 Develop a plan how to handle each item
 Current plan
 	Try some medium problems
-		Find first and last position in sorted array
 		Rotate image
 		Spiral matrix
 		Jump Game
@@ -75,3 +74,4 @@ Completed tasks
 
 Maybe stuff you want to get back to
 	Search for Rotated Sorted Array (not clear what is expected)
+	Find first and last position in sorted array (do again with log n runtime)
