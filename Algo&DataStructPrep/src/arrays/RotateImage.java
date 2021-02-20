@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class RotateImage {
 
 	public static void main(String[] args) {
@@ -35,13 +37,29 @@ public class RotateImage {
 		1 <= n <= 20
 		-1000 <= matrix[i][j] <= 1000*/
 		
+		int matrix[][] = new int[][] {{1,2},{3,4}};
+		int storeNum = matrix[0][0];
+		
+		for(int row = 0; row < matrix.length; row++)
+			storeNum = matrix[0][0];//Store one element
+			for(int column = 0; column < matrix.length; column++) {
+				
+				matrix[0][1] = storeNum;//Move the top side
+				
+				matrix[1][1] = matrix[0][1];//Move the right side
+				//Move the bottom
+				matrix[0][0] = matrix[1][0];//Move the left side				
+			}
+			
+		System.out.println(Arrays.toString(matrix[0]));
+		
+		//System.out.println(Arrays.toString(matrix[0]));
+				
 		//Loop through the n/2 layers
 			//Loop through the elements from 0 to n in the layer
-				//Store one element
-				//Move the top side
-				//Move the right side
-				//Move the bottom
-				//Move the left side
+				
+				
+
 
 	}
 
