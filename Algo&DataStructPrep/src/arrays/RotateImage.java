@@ -46,7 +46,7 @@ public class RotateImage {
 		int sizeOfArrays = matrix.length -1;
 		int temp[] = new int[sizeOfArrays];
 		int numOfLayers = matrix.length/2;
-		
+		  
 		for(int layer = 0; layer < numOfLayers; layer++) {
 			for(int pivotIndex = 0; pivotIndex < sizeOfArrays-(2*layer); pivotIndex++){ //pivots are going to be two less (one per side)
 				temp[pivotIndex] = matrix[layer][pivotIndex + layer]; //store top (n - 1) - 2 * numberOfLayers
