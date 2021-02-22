@@ -37,30 +37,29 @@ public class RotateImage {
 		1 <= n <= 20
 		-1000 <= matrix[i][j] <= 1000*/
 		
-		int matrix[][] = new int[][] {{1,2},{3,4}};
-		int storeNum = matrix[0][0];
+		int matrix[][] = new int[][] {{1,2,3},{4,5,6},{7,8,9}};//[[7,4,1],[8,5,2],[9,6,3]]
+		//int matrix[][] = new int[][] {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}};
+		//[[15,13,2,5],
+		//[14,3,4,1],
+		//[12,6,8,9],
+		//[16,7,10,11]]
+		int sizeOfArrays = matrix.length -1;
+		int temp[] = new int[sizeOfArrays];
+		int numOfLayers = matrix.length/2;
 		
-		for(int row = 0; row < matrix.length; row++)
-			storeNum = matrix[0][0];//Store one element
-			for(int column = 0; column < matrix.length; column++) {
-				
-				matrix[0][1] = storeNum;//Move the top side
-				
-				matrix[1][1] = matrix[0][1];//Move the right side
-				//Move the bottom
-				matrix[0][0] = matrix[1][0];//Move the left side				
+		for(int layer = 0; layer < numOfLayers; layer++) {
+			for(int pivotIndex = 0; pivotIndex < sizeOfArrays-(2*layer); pivotIndex++){ //pivots are going to be two less (one per side)
+				temp[pivotIndex] = matrix[layer][pivotIndex + layer]; //store top (n - 1) - 2 * numberOfLayers
+				matrix[layer][pivotIndex + layer] = matrix[sizeOfArrays-pivotIndex-layer][layer]; //top -> left
+				matrix[sizeOfArrays- pivotIndex - layer][layer] = matrix[sizeOfArrays - layer][sizeOfArrays-pivotIndex-layer]; //left -> bottom
+				matrix[sizeOfArrays - layer][sizeOfArrays-pivotIndex-layer] = matrix[pivotIndex + layer][sizeOfArrays - layer]; //bottom -> right
+				matrix[pivotIndex + layer][sizeOfArrays - layer] = temp[pivotIndex]; //right -> stored top
 			}
-			
-		System.out.println(Arrays.toString(matrix[0]));
+		}
+
+		for(int[] array : matrix) System.out.println(Arrays.toString(array));
 		
-		//System.out.println(Arrays.toString(matrix[0]));
-				
-		//Loop through the n/2 layers
-			//Loop through the elements from 0 to n in the layer
-				
-				
-
-
+		//Complexity is n^2 since we touch each element.
 	}
 
 }
