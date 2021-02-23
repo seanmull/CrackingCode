@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MergeIntervals {
 
 	public static void main(String[] args) {
@@ -22,7 +25,32 @@ public class MergeIntervals {
 		1 <= intervals.length <= 104
 		intervals[i].length == 2
 		0 <= starti <= endi <= 104*/
+		
+		//we are assuming the intervals are sorted.
 
+		ArrayList <Integer[]> intervals = new ArrayList <Integer[]> ();
+		intervals.add(new Integer[] {1,4});
+		intervals.add(new Integer[] {4,5});
+		
+		//intervals.add(new Integer[] {2,6});
+		//intervals.add(new Integer[] {8,10});
+		//intervals.add(new Integer[] {15,18});
+		
+		for(int i = 0; i < intervals.size() - 1; i++) {
+			//System.out.println(Arrays.toString(intervals.get(i)));
+			for(int j = i + 1; j < intervals.size(); j++) {
+				//System.out.println(Arrays.toString(intervals.get(j)));
+				if(intervals.get(i)[1] >= intervals.get(j)[0]) {
+					intervals.get(j)[0] = intervals.get(i)[0];
+					intervals.remove(i);
+					i--;
+					break;
+				}
+			}
+		}
+		for(Integer[] interval : intervals) System.out.println(Arrays.asList(interval));
+		
+		//Runtime is n * n-1 which is n^2 runtime
 	}
 
 }

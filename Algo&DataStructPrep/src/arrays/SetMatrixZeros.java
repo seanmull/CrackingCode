@@ -30,6 +30,18 @@ public class SetMatrixZeros {
 		n == matrix[0].length
 		1 <= m, n <= 200
 		-231 <= matrix[i][j] <= 231 - 1*/
+		
+		int matrix[][] = new int[][] {{1,1,1},{1,0,1},{1,1,1}};//[[1,0,1],[0,0,0],[1,0,1]]
+		
+		//Brute force solution
+		for(int i = 0; i < matrix.length; i++)
+			for(int j = 0; j < matrix[0].length; j++) {
+				if(matrix[i][j] == 0) {
+					//set row to zero
+					
+					//set column to zero
+				}
+			}
 
 	}
 
