@@ -1,7 +1,6 @@
 package arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class SpiralMatrix {
 
@@ -34,7 +33,6 @@ public class SpiralMatrix {
 		int n = matrix.length; //column length
 		int x = 0; //row position
 		int y = 0; //column position
-		int layer = 0; //initialize layer number
 		ArrayList <Integer> spiralMatrix = new ArrayList <Integer> ();
 		
         while(n > 0 && m > 0) {
