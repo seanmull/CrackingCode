@@ -3,14 +3,8 @@ Understand if you can used API or not
 Develop a plan how to handle each item
 Current plan
 	Try some medium problems
-		Jump Game
-		Unique Paths
 		Merge Intervals
 		Set Matrix Zeros
-		Sort Colors
-		SubSets
-		Word Search
-
 In work
 	Arrays
 	
@@ -72,3 +66,8 @@ Completed tasks
 Maybe stuff you want to get back to
 	Search for Rotated Sorted Array (not clear what is expected)
 	Find first and last position in sorted array (do again with log n runtime)
+	Jump Game (recursion problem).
+	Unique Paths (tree problem).
+	SortColors (sort problem).
+	Subsets (tree problem + sort problem)
+	WordSearch (tree problem).
