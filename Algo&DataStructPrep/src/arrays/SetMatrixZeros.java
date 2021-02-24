@@ -34,42 +34,33 @@ public class SetMatrixZeros {
 		1 <= m, n <= 200
 		-231 <= matrix[i][j] <= 231 - 1*/
 		
-		int matrix[][] = new int[][] {{1,1,1},{1,0,1},{1,1,1}};//[[1,0,1],[0,0,0],[1,0,1]]
+		//int matrix[][] = new int[][] {{1,1,1},{1,0,1},{1,1,1}};//[[1,0,1],[0,0,0],[1,0,1]]
+		int matrix[][] = new int[][] {{0,1,2,0},{3,4,5,2},{1,3,1,5}};//[[0,0,0,0],[0,4,5,0],[0,3,1,0]]
 		ArrayList <Integer> x = new ArrayList <Integer> ();
 		ArrayList <Integer> y = new ArrayList <Integer> ();
 		
 		for(int i = 0; i < matrix.length; i++)
 			for(int j = 0; j < matrix[0].length; j++) {
 				if(matrix[i][j] == 0) {
-					//store i that is zero
-					x.add(i);
-					//store j that is zero
-					y.add(j);
+					x.add(i); //store i that is zero
+					y.add(j); //store j that is zero
 				}
 			}
-		
 		int j = 0;
 		for(int i = 0; i < matrix.length; i++) {
-			//if i in x matrix[i][j] = 0
-			for(int k = 0; k < x.size(); k++) {
-				if(x.get(k).equals(i)) {
-					matrix[i][j] = 0;
-					break;
-				}
-			}
 			for(j = 0; j < matrix[0].length; j++) {
-				//if j in y matrix[i][j] = 0
-				for(int l = 0; l < y.size(); l++) {
-					if(x.get(k).equals(i)) {
-						matrix[i][j] = 0;
-						break;
-					}
-				}
+				for(int l = 0; l < y.size(); l++) if(y.get(l).equals(j)) matrix[i][j] = 0;
+				for(int k = 0; k < x.size(); k++) if(x.get(k).equals(i)) matrix[i][j] = 0;
 			}
+			j = 0;
 		}
 		
-		
 		for(int[] array : matrix) System.out.println(Arrays.toString(array));
+		
+		//This is the 0(mn) space solution since x and y arrays can have repeats of the indexes
+		//A way to get this down to m + n space would be remove duplicates through a helper function
+		//A to get constant time is to take advantage of the contrant of having the rows and columns
+		//no bigger then 200.
 
 	}
 
