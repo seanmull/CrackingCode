@@ -1,15 +1,19 @@
-Understand if you can used API or not
-
-Develop a plan how to handle each item
-Current plan
-	Try some medium problems
-		Set Matrix Zeros
 In work
-	Arrays
+	Strings
+		Roman to Integer
+		LongestCommonPrefix
+		ValidParenteses
+		ImplementStrStr
+		LetterToPhone
+		CountAndSay
+		GenerateParentheses
+		LongSub
+		LongPalindrome
+		StringToInt
+		GroupAnagrams
 	
 	
 Planned firing order
-	Strings
 	Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
 	Stability in Sorting
 	Mergesort
@@ -62,6 +66,7 @@ To do tasks
 	
 	
 Completed tasks
+	Arrays
 
 Maybe stuff you want to get back to
 	Search for Rotated Sorted Array (not clear what is expected)
