@@ -1,5 +1,8 @@
 package arrays;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class SetMatrixZeros {
 
 	public static void main(String[] args) {
@@ -32,16 +35,41 @@ public class SetMatrixZeros {
 		-231 <= matrix[i][j] <= 231 - 1*/
 		
 		int matrix[][] = new int[][] {{1,1,1},{1,0,1},{1,1,1}};//[[1,0,1],[0,0,0],[1,0,1]]
+		ArrayList <Integer> x = new ArrayList <Integer> ();
+		ArrayList <Integer> y = new ArrayList <Integer> ();
 		
-		//Brute force solution
 		for(int i = 0; i < matrix.length; i++)
 			for(int j = 0; j < matrix[0].length; j++) {
 				if(matrix[i][j] == 0) {
-					//set row to zero
-					
-					//set column to zero
+					//store i that is zero
+					x.add(i);
+					//store j that is zero
+					y.add(j);
 				}
 			}
+		
+		int j = 0;
+		for(int i = 0; i < matrix.length; i++) {
+			//if i in x matrix[i][j] = 0
+			for(int k = 0; k < x.size(); k++) {
+				if(x.get(k).equals(i)) {
+					matrix[i][j] = 0;
+					break;
+				}
+			}
+			for(j = 0; j < matrix[0].length; j++) {
+				//if j in y matrix[i][j] = 0
+				for(int l = 0; l < y.size(); l++) {
+					if(x.get(k).equals(i)) {
+						matrix[i][j] = 0;
+						break;
+					}
+				}
+			}
+		}
+		
+		
+		for(int[] array : matrix) System.out.println(Arrays.toString(array));
 
 	}
 
