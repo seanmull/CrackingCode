@@ -13,9 +13,14 @@ public class RomanToInt {
 		C             100
 		D             500
 		M             1000
-		For example, 2 is written as II in Roman numeral, just two one's added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
+		For example, 2 is written as II in Roman numeral, just two one's added together. 
+		12 is written as XII, which is simply X + II. The number 27 is written as XXVII, 
+		which is XX + V + II.
 
-		Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+		Roman numerals are usually written largest to smallest from left to right. 
+		However, the numeral for four is not IIII. Instead, the number four is written as IV. 
+		Because the one is before the five we subtract it making four. The same principle applies to the number nine, 
+		which is written as IX. There are six instances where subtraction is used:
 
 		I can be placed before V (5) and X (10) to make 4 and 9. 
 		X can be placed before L (50) and C (100) to make 40 and 90. 
@@ -53,7 +58,48 @@ public class RomanToInt {
 		1 <= s.length <= 15
 		s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M').
 		It is guaranteed that s is a valid roman numeral in the range [1, 3999].*/
+		
+		//String s = "MCMXCIV";
+		//String s = "III";
+		//String s = "IV";
+		//String s = "IX";
+		String s = "LVIII";
+		int num = 0;
+		int curInt;
+		int nextInt;
 
+		char[] charArray = s.toCharArray();
+		
+		for(int charIndex = 0; charIndex < charArray.length;) {
+			curInt = findIntFromRoman(charArray[charIndex]);
+			if(charIndex != charArray.length - 1) {
+				nextInt = findIntFromRoman(charArray[charIndex + 1]);
+				if(curInt < nextInt) {
+					num = num + nextInt - curInt;
+					charIndex = charIndex + 2;
+					continue;
+				}
+			}
+			num = num + curInt;
+			charIndex++;	
+			}
+		System.out.println(num);
+		}
+	public static int findIntFromRoman(char c) {
+		char[] romanChar = new char[] {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
+		int[] romanInt = new int[] {1, 5 , 10 , 50 , 100 , 500 ,1000};
+		for(int i = 0; i < romanChar.length; i++) {
+			if(romanChar[i] == c) return romanInt[i];
+		}
+		return -1;
+		
 	}
+	//Runtime is n since we have to touch all letters. Storage is also n since you need to convert to char array.
+		
 
 }
+	
+
+	
+
+
