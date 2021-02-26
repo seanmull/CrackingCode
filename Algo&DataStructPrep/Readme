@@ -1,6 +1,5 @@
 In work
 	Strings
-		LongestCommonPrefix
 		ValidParenteses
 		ImplementStrStr
 		LetterToPhone
@@ -17,8 +16,11 @@ Planned firing order
 	Stability in Sorting
 	Mergesort
 	Quicksort
+	Write the merge sort algorithm
+	Write the quicksort algorithm
 	Dynamic Array	
 	Implement an ArrayList from scratch
+	
 
 Source - https://www.alimirio.com/posts/read-this-before-you-start-solving-problems-on-leetcode-prep-work
 Data Structures
@@ -54,10 +56,8 @@ To do tasks
 	Reverse a linked list
 	Implement a Stack & a Queue using Array
 	Implement a HashTable with simple Hashing functions
-	Implement a Graph using Adjacency List, and then write functions for BFS & DFS.
+	Implement a Graph using Adjacency List, and then write functions for BFS & DFS.\
 	Write the binary search algorithm both recursively and iteratively
-	Write the merge sort algorithm
-	Write the quicksort algorithm
 	Print binary tree using DFS (in-order, preorder and post order — all three of them) and BFS.
 	Memorize time & space complexities for common algorithms. Here’s an interesting website.
 	Implement a trie.
