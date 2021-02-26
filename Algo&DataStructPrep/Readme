@@ -18,6 +18,8 @@ Planned firing order
 	Quicksort
 	Write the merge sort algorithm
 	Write the quicksort algorithm
+	SortColors (sort problem).
+	Find first and last position in sorted array (do again with log n runtime)
 	Dynamic Array	
 	Implement an ArrayList from scratch
 	
@@ -69,9 +71,7 @@ Completed tasks
 
 Maybe stuff you want to get back to
 	Search for Rotated Sorted Array (not clear what is expected)
-	Find first and last position in sorted array (do again with log n runtime)
 	Jump Game (recursion problem).
 	Unique Paths (tree problem).
-	SortColors (sort problem).
 	Subsets (tree problem + sort problem)
 	WordSearch (tree problem).
