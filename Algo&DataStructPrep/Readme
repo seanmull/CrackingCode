@@ -1,8 +1,5 @@
 In work
 	Strings
-		LetterToPhone
-		CountAndSay
-		GenerateParentheses
 		LongSub
 		LongPalindrome
 		StringToInt
@@ -73,3 +70,6 @@ Maybe stuff you want to get back to
 	Unique Paths (tree problem).
 	Subsets (tree problem + sort problem)
 	WordSearch (tree problem).
+	LetterToPhone (tree problem).
+	CountAndSay (recursion problem).
+	GenerateParentheses (tree problem).

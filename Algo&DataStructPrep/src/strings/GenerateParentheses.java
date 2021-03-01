@@ -3,7 +3,8 @@ package strings;
 public class GenerateParentheses {
 
 	public static void main(String[] args) {
-		/*Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+		/*Given n pairs of parentheses, write a function to generate all combinations of 
+		 * well-formed parentheses.
 
 		 
 
