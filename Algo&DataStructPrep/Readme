@@ -1,10 +1,8 @@
 In work
-	Strings
-		GroupAnagrams
+	Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
 	
 	
 Planned firing order
-	Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
 	Stability in Sorting
 	Mergesort
 	Quicksort
@@ -60,6 +58,7 @@ To do tasks
 	
 Completed tasks
 	Arrays
+	Strings
 
 Maybe stuff you want to get back to
 	Search for Rotated Sorted Array (not clear what is expected)
