@@ -1,4 +1,4 @@
-package arrays;
+package bitmanipulation;
 
 import java.util.Arrays;
 

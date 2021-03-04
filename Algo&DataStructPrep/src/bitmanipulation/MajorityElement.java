@@ -1,4 +1,4 @@
-package arrays;
+package bitmanipulation;
 
 public class MajorityElement {
 
