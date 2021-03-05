@@ -38,7 +38,57 @@ public class ReverseBits {
 
 		The input must be a binary string of length 32*/
 		
-		//https://www.geeksforgeeks.org/reverse-actual-bits-given-number/
+		
+		//String n = "11111111111111111111111111111101"; //3221225471
+		String n = "00000010100101000001111010011100"; //964176192
+		char[] nChars = new char[32];
+		nChars = n.toCharArray();
+		long b = 0;  //does not have unsigned int so grab some more memory
+		int a = 0;
+
+		
+		//Convert string to int
+		for(int i = nChars.length - 1 ; i > 0; i--) { 
+			if(nChars[i] == '1') b += Math.pow(2, a);
+			a++;
+		}
+		
+		long r = b;
+		long rev = 0;
+		int count = 0;
+		
+		System.out.println(b); //43261596
+		
+		//Count how many bits used in b but don't kill the number
+		while(r > 0) {  
+			r >>= 1;
+			count++;
+		}
+		
+		System.out.println(count);
+		
+		//Take bits from n and read them in reverse for rev
+		while(b > 0) {
+			System.out.println(Long.toBinaryString(b) + " " + Long.toBinaryString(rev));
+			rev <<= 1; //shift rev to left this creates a zero to bottom bit
+			if((int)(b & 1) == 1) { //if bottom bit in n is 1
+				rev ^= 1;  //flip bottom bit in rev
+			}
+			b >>= 1; //shift n to right
+		}
+		
+		//Shift left for all the leading zeros were in n
+		rev <<= 32-count;
+
+		
+		//1011 ^ 001 = 1010  only the last
+		//n & 1 == 1 would only be true if n had 1 on the right most bit
+		//rev ^= 1 this flips the bottom bit to 0 since it has to be 1
+		
+		System.out.println(rev + " " + Long.toBinaryString(rev)); 
+		
+
+		
 		
 		
 		

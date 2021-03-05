@@ -1,6 +1,5 @@
 In work
 	Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
-		Reverse bits
 		Number of 1 bits
 		Missing number
 		Subsets
@@ -15,9 +14,9 @@ Planned firing order
 	Write the quicksort algorithm
 	SortColors (sort problem).
 	Find first and last position in sorted array (do again with log n runtime)
-	Dynamic Array	
-	Implement an ArrayList from scratch
-	
+	Dynamic Array
+	Implement an ArrayList from scratch	
+
 
 Source - https://www.alimirio.com/posts/read-this-before-you-start-solving-problems-on-leetcode-prep-work
 Data Structures
