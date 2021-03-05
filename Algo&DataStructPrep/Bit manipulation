@@ -29,6 +29,8 @@ Operations
 	^ (xor)
 	1100 & 1011 = 0111 (since the first digit is in both)
 	
+	1100 & 1100 = 
+	
 	(https://www.calculator.net/binary-calculator.html)
 	Add
 	20 + 10 = 30
@@ -49,6 +51,18 @@ Operations
 	Signed vs Unsigned
 	First place in memory for binary is reserved for negative sign if signed
 	For Unsigned this place is used to store a bigger number if needed.
+	
+Typical problems (https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/)
+Find the Missing Number
+swap two numbers without using a temporary variable
+A Memory Efficient Doubly Linked List
+Find the two non-repeating elements.
+Find the two numbers with odd occurences in an unsorted-array.
+Add two numbers without using arithmetic operators.
+Swap bits in a given number/.
+Count number of bits to be flipped to convert a to b .
+Find the element that appears once.
+Detect if two integers have opposite signs.
 
 
 How to use bitwise operation in java
@@ -75,3 +89,4 @@ assertEquals("111", binaryString);
 
 
 //practice info https://www.techiedelight.com/bit-manipulation-interview-questions/
+//https://www.geeksforgeeks.org/bitwise-operators-in-c-cpp/

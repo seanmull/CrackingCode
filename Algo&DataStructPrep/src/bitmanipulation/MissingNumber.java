@@ -56,13 +56,35 @@ public class MissingNumber {
 				if(orderedArray[i] == inputArray[j]) isFound = true;
 			}
 			if(!isFound) {
-				System.out.println("The missing number in Array : " + Arrays.toString(inputArray) + " is " + orderedArray[i]);
-				System.exit(0);
+				//System.out.println("The missing number in Array : " + Arrays.toString(inputArray) + " is " + orderedArray[i]);
+				//System.exit(0);
 			}
 		}
 		//The first loop is constant space and runtime since it only goes to 10000
 		//The second loop only goes through n numbers
 		//So space is O(1) and runtime is 1 * n which is O(n)
+		
+		/*Approach: 
+			XOR has certain properties 
+			Assume a1 ^ a2 ^ a3 ^ …^ an = a and a1 ^ a2 ^ a3 ^ …^ an-1 = b
+			Then a ^ b = an*/
+		
+		
+		//Perhaps add all the numbers [0,n]
+		//Then subtract all the number
+		int a = 0;
+		int b = 0;
+		//Adds 0 - n
+		for(int i = 0; i <= inputArray.length; i++) {
+			a ^= i;
+		}
+		//Sums the array
+		for(int i = 0; i < inputArray.length; i++) {
+			b ^= inputArray[i];
+		}
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(a^b);
 	}
 
 }
