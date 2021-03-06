@@ -21,6 +21,15 @@ public class SubSets {
 		1 <= nums.length <= 10
 		-10 <= nums[i] <= 10
 		All the numbers of nums are unique.*/
+		
+		//Pick nothing
+		//Pick 1
+		//Pick 2
+		//Pick 1,2
+		//Pick 3
+		//Pick 1,3
+		//Pick 2,3
+		//Pick 1,2,3
 
 	}
 
