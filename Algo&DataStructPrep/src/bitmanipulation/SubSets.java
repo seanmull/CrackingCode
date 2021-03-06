@@ -22,14 +22,12 @@ public class SubSets {
 		-10 <= nums[i] <= 10
 		All the numbers of nums are unique.*/
 		
-		//Pick nothing
-		//Pick 1
-		//Pick 2
-		//Pick 1,2
-		//Pick 3
-		//Pick 1,3
-		//Pick 2,3
-		//Pick 1,2,3
+		//think of sets as binary
+		//set      binary
+		//[]       000
+		//[1]      100
+		//[2]      010
+		//etc
 
 	}
 
