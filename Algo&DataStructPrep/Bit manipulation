@@ -23,6 +23,8 @@ Operations
 	& (and)
 	1100 & 1011 = 1000 (since only first digit is in both)
 	
+	101 & 001 = 001
+	
 	| (or)
 	1100 & 1011 = 1111 (since all digits have at least on in each)
 	
