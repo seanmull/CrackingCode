@@ -20,6 +20,21 @@ Operations
 	Right shift  x >> (n) where n is a number
 	101010 -> 10101 (shift all numbers right) (n = 1) arithmetic shift
 	
+	1 & 1 = 1
+	0 & 0 = 0
+	1 & 0 = 0
+	0 & 1 = 0
+	
+	1 | 1 = 1
+	0 | 0 = 0
+	1 | 0 = 1
+	0 | 1 = 1
+	
+	1 ^ 1 = 0
+	0 ^ 0 = 0
+	0 ^ 1 = 1
+	1 ^ 0 = 1
+	
 	& (and)
 	1100 & 1011 = 1000 (since only first digit is in both)
 	
