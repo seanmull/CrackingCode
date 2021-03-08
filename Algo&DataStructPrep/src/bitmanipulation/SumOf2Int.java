@@ -62,7 +62,7 @@ public class SumOf2Int {
 				System.out.println(c);
 				System.out.println(carryOver);*/
 		
-				int a = 2;
+				/*int a = 2;
 				int b = -3;
 				
 				while(a > 0) {
@@ -72,8 +72,37 @@ public class SumOf2Int {
 				while(a < 0) {
 					b--;
 					a++;
-				}
+				}*/
 				//System.out.println(b);
+		
+				int y = 3;
+				int x = 2;
+		
+				while (y != 0) 
+				{
+				
+					// carry now contains common
+					// set bits of x and y
+				int carry = x & y; //10, 01 & 100 = 0
+				System.out.println(Long.toBinaryString(x) + " " + Long.toBinaryString(y) + " " + Long.toBinaryString(carry));
+ 
+				// Sum of bits of x and 
+				// y where at least one 
+				// of the bits is not set
+				x = x ^ y; //01, 01 ^ 100 = 101
+				System.out.println(Long.toBinaryString(x) + " " + Long.toBinaryString(y) + " " + Long.toBinaryString(carry));
+ 
+				// Carry is shifted by 
+				// one so that adding it 
+				// to x gives the required sum
+				y = carry << 1; //100, 0 << 1 = 0
+				}
+				System.out.println(x);
+				
+				//11
+				//10
+				
+				
 				
 			
 				

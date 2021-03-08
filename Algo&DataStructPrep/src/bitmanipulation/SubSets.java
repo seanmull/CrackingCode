@@ -1,5 +1,8 @@
 package bitmanipulation;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class SubSets {
 
 	public static void main(String[] args) {
@@ -28,6 +31,36 @@ public class SubSets {
 		//[1]      100
 		//[2]      010
 		//etc
+		
+		int[] nums = new int[] {1,2,3};
+		int numOfIter = (int) Math.pow(2,nums.length);
+		ArrayList <Integer>[] subSets = new ArrayList[numOfIter];
+		int r;
+		int j;
+		int subSetIndex = 0;
+		
+		for(int i = 0; i < numOfIter; i++) {
+			r = i;  //copy i so we don't kill it when we right shift it
+			j = 0;  //index of nums
+			ArrayList <Integer> subSet = new ArrayList <Integer>();
+			while(r != 0) {
+				//System.out.println(Long.toBinaryString(r));
+				if((int)(r & 1) == 1) {
+					subSet.add(nums[j]);
+				}
+				r >>= 1;
+				j++;
+			}
+			subSets[subSetIndex] = subSet;
+			subSetIndex++;
+		}
+		System.out.println(Arrays.toString(subSets));
+		
+		//Runtime is 2^n since we have to iterate through each number 2^n for power set
+		//Space is also 2^n since each set will need to be contained in the array
+				
+		
+		
 
 	}
 
