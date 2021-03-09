@@ -1,9 +1,26 @@
 In work
 	Practice recursion on a few problems look into dynamic programming
 		https://www.youtube.com/watch?v=oBt53YbR9Kk&t=760s
+		 fib memoization
+		 gridTraveler memoization
+	     memoization recipe
+         canSum memoization
+         howSum memoization
+         bestSum memoization
+         canConstruct memoization
+         countConstruct memoization 
+         allConstruct memoization
+         fib tabulation
+         gridTraveler tabulation
+         tabulation recipe
+         canSum tabulation
+         howSum tabulation
+         bestSum tabulation
+         canConstruct tabulation
+         countConstruct tabulation
+         allConstruct tabulation
 	
 Planned firing order
-
 	Stability in Sorting
 	Mergesort
 	Quicksort
