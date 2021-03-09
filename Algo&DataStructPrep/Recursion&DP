@@ -1,4 +1,142 @@
 Concepts
+Recursion
 
+One way to think about recursion is to look at a map
+Lets say I want to get to A.
+But only one way to get to A is through B, C, & D.
+This is true since only one road gets to A and the other locations
+are stops on the way there.
+
+Lets look at a representation of this:
+B -> C -> D -> A
+
+Recursion needs two cases: A base case and inductive case
+A base case would be check if you are at A.
+An inductive case would usually follow this base case.  It could possiblely
+Check the adjacent location.
+
+Say we have a function f(n) where n is the location.  The function would
+recursively look to A.
+
+Heres the code for this algorthm:
+Assign n = <some location on the map>
+Invoke f(n)
+	Check if n = A print "Found A!" exit program //base case
+	Assign n = n.next() //this assigns n to the next node
+	return f(n) //recursive case
+	
+How would this run if we passed n = B;
+Invoke f(B)
+Check if its A <false>
+Reassign n to n.next = C
+Invoke f(C)
+Check if its A <false>
+Reassign n to n.next = D
+Invoke f(D)
+Check if its A <false>
+Reassign n to n.next = A
+Invoke f(A)
+Check if its A <true>
+print "Found A!"
+
+Another way of look at this is to say the functions all inside one another
+We are trying to solve for f(f(f(f(A))))
+Where we want to go is "buried" in our initial function call
+
+What's the benefit as supposed to iteration?
+
+How would this be solved iteratively?
+We would store B,C,D,A in an array
+We go through the indexs of the array until we arrive at A and be done
+
+So one could say that if a problem like this can easily mapped to an index
+Recursion not really benefital to use since it seems more complicated.
+But imagine the path was not so straight forward?
+Imagine we had two branches per node like this
+B -> C -> A
+  -> D -> E
+  	   -> F
+  	   -> G
+Iteration could still be used but it would be messy to program all the conditionals.
+The power of recursion is that we can map our problem to something that cannot be
+easily dealt with with indexing/iteration.  Iteration requires we move to the next index
+and do the same stuff.  Recursion allows us solve a smaller chunk of the problem until we
+arrive at the solution.  Different problems "map" better to a resursive algorthm.
+
+How is memory handled with recursion when compared to iteration?
+
+Useful terms
+Program stack: Place in memory where function calls are stored
+The main function is on the bottom.
+Stack frame: Buffer memory that has data from the program stack such as
+	Return address
+	Input parameters
+	Local variables
+	Register Savings
+Stack pointer - pointer that points to the top of the stack
+(the most recent function called)
+
+What happens when we call a function
+1.Stack frame is pushed into stack (location of function)
+The counter of call is 100 but function is on 104
+2.Sub-routine instructions are executed.
+Address from 2000-2020 are executed. 
+3.Stack Frame is popped from the stack.
+The 104 frame is taken off the stack
+4.Now Program counter is holding the return address
+
+Heap memory is what is stored while the program is running
+Stack memory is memory that is temporarily stored when functions
+are called.
+
+Here is an example of how memory is stored:
+
+package com.journaldev.test; 
+public class Memory { 
+ public static void main(String[] args) { // Line 1 
+ int i=1; // Line 2 
+ Object obj = new Object(); // Line 3 
+ Memory mem = new Memory(); // Line 4 
+ mem.foo(obj); // Line 5
+  } // Line 9
+ private void foo(Object param) { // Line 6
+  String str = param.toString();  //// Line 7 
+  System.out.println(str); } // Line 8
+}
+
+All Runtime classes are loaded into the Heap Space when the program is run.
+Java Runtime creates Stack memory to be used by main() method thread when 
+it is found at line 1. 
+At line 2, a primitive local variable is created, which is 
+stored in the Stack memory of main() method.
+Since an Object is created at line 3, it’s created in 
+Heap memory and the reference for it is stored in Stack memory. 
+At line 4, a similar process occurs when a Memory object is created.
+When foo() method is called at line 5, a block in the 
+top of the Stack is created for it. Since Java is pass by value, 
+a new reference to Object is created in the foo() stack block in line 6.
+At line 7, a string is created, which goes in the 
+String Pool in the Heap space, while a reference for 
+it is created in the foo() stack space. 
+At line 8, foo() method is terminated, and the memory 
+block allocated for it in the Stack is freed.
+Finally, at line 9, main() method terminates, and the 
+Stack memory created for it is destroyed. 
+Because the program ends at this line, Java Runtime 
+frees all the memory and ends the execution of the program.
+
+In some programming languages, the maximum size of the call stack is much 
+less than the space available in the heap, and recursive algorithms 
+tend to require more stack space than iterative algorithms. 
+Consequently, these languages 
+sometimes place a limit on the depth of recursion to avoid stack overflows;
+
+These stack allocations can sometime designed to not handle recursion well,
+since they assume you will will "get in and out" instead of constantly staying
+in the function call stacking more and more calls.
+
+Dynammic programming
+
+Features
 
 Typical implementation
