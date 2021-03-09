@@ -13,7 +13,7 @@ Operations
 	Negation ~x
 	0101 -> 1010 (we flip the 0 and 1)
 	
-	Left shift  x << (n) where n is a number
+	Left shift  x << (n) where n is a number (<<< is the logical shift variant where the sign is shifted too)
 	101010 -> 1010100 (shift all numbers left) (n = 1)
 	Note: Left most position is ignored
 	
@@ -64,6 +64,26 @@ Operations
 	Divide
 	20 / 10 = 2
 	10100 / 1010 = 10
+	
+	Getting bits
+	And operation clears all bits except the shifted 1
+	If its zero it will return false
+	num & (1 << i) != 0
+	
+	Setting bits
+	All the other zeros will not effect num but the 1
+	num | (1 << i)
+	
+	Clearing bit
+	Same as getting bit but in reverse
+	All the 1s will just mirror num
+	The one 0 will clear the bit
+	num & ~(1 << i);
+	
+	Updating bit
+	value = bitIs1 ? 1 : 0;
+	mask = ~(1 << i)
+	return (num & mask) | (value << i)
 	
 	Signed vs Unsigned
 	First place in memory for binary is reserved for negative sign if signed

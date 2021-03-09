@@ -10,6 +10,16 @@ public class Insertion {
 		example, have j = 3 and i = 2, because M could not fully fit between bit 3 and bit 2.*/
 		//Input N = 10000000000 M 10011 i= 2 j = 6
 		//Output N = 10001001100
-	}
+		
+		int N = (int) Math.pow(2,9); //1000000000
+		int M = 19; //0000010011
+		int i = 2; //2
+		//int j = 6; //6
+
+		N |= M << i;
+		
+		System.out.println(Long.toBinaryString(N));
+
+	}   
 
 }

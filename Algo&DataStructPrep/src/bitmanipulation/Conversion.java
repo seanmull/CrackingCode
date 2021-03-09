@@ -8,6 +8,11 @@ public class Conversion {
 		EXAMPLE 
 		Input: 29 (or: 11101), 15 (or: 01111) 
 		Output: 2 */
+		
+		int a = 11;
+		int b = 4;
+		
+		System.out.println(a & b);
 
 	}
 
