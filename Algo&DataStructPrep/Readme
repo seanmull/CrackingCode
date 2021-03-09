@@ -1,12 +1,9 @@
 In work
-	Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
-		Conversion
-		Pairwise swap
-		
-	
-Planned firing order
 	Practice recursion on a few problems look into dynamic programming
 		https://www.youtube.com/watch?v=oBt53YbR9Kk&t=760s
+	
+Planned firing order
+
 	Stability in Sorting
 	Mergesort
 	Quicksort
@@ -63,6 +60,7 @@ To do tasks
 Completed tasks
 	Arrays
 	Strings
+	Bit Manipulation & Numbers — difference btw Unsigned vs signed numbers
 
 Maybe stuff you want to get back to
 	Search for Rotated Sorted Array (not clear what is expected)
