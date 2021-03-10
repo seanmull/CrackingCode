@@ -135,6 +135,9 @@ These stack allocations can sometime designed to not handle recursion well,
 since they assume you will will "get in and out" instead of constantly staying
 in the function call stacking more and more calls.
 
+More information about stack and heap memory can be found here:
+https://www.geeksforgeeks.org/stack-vs-heap-memory-allocation/
+
 Dynammic programming
 
 Features
