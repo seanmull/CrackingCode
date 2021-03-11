@@ -170,7 +170,7 @@ This turns the solution into 2n runtime.  Considerably faster.
 
 As far as memory goes, when we store function calls the place in memory is freed up
 after the call is completed.  So for instance when we get all the way down to f(n-1) we store the result
-to the next function call up f(n -2).  After that the memory from f(n - 1).  So the largest memory allocated
+to the next function call up f(n -2).  After that the memory from f(n - 1) is freed up.  So the largest memory allocated
 is when we get to the bottom ie f(f(f(f(n-3)))) so the memory usage is tree depth.  This is true for both
 memoized and non-memoized versions of the calcuation.
 
