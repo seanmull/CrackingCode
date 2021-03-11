@@ -14,6 +14,7 @@ public class TowersOfHanoi {
 		move(3, A, C, B);
 	}
 	
+	
 	public static void move(int n, ArrayList<Integer> source, ArrayList<Integer> target, ArrayList<Integer> aux) {
 		if(n > 0) {
 			//Move n-1 disks from source to aux, so they are out of the way

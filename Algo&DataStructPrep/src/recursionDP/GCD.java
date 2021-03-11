@@ -6,6 +6,7 @@ public class GCD {
 		System.out.println(GrtComDiv(18, 48));
 	}
 	
+
 	public static int GrtComDiv(int x, int y) {
 		int a; int b;
 		if(x > y) {

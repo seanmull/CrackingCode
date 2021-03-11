@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class Palindrome {
 
+	
 	public static void main(String[] args) {
 		String s = "g1dd1g";
 		System.out.println(pala(s.toLowerCase().toCharArray()));
