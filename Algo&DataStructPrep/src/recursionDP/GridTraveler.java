@@ -8,6 +8,7 @@ public class GridTraveler {
 
 		System.out.println(GridTraveler1(10,10));
 		
+		
 	}
 	
 	public static int GridTraveler1(int x, int y) {
