@@ -3,8 +3,8 @@ package recursionDP;
 public class CanSum {
 
 	public static void main(String[] args) {
-		int[] num = new int[] {7,6,7,6};
-		System.out.println(CanSums(10, num));
+		int[] num = new int[] {7,4};
+		System.out.println(CanSums(500, num));
 
 	}
 	
