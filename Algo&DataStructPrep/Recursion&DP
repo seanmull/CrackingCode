@@ -187,6 +187,18 @@ f(n)
 if n = 1 return n
 return n * f(n-1)
 
+Here are few variations to this pattern
+
+return f(n)
+This tells the program to call the result up the tree directly
+
+if(f(n) <some conditions>)
+This is not returning the function call directly up the tree.
+
+var = f(n)
+This is storing the function call that can be later compared.  Its not returning
+the call up the tree.
+
 We return the same function.
 
 Memoization is usually employed using a hashtable or map.  This allows quick constant runtime

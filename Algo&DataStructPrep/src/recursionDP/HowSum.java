@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class HowSum {
 
 	public static void main(String[] args) {
-		int[] num = new int[] {7,14};
+		int[] num = new int[] {2,3,4};
 		ArrayList <Integer> returnArr = new ArrayList <Integer> ();
-		System.out.println(HowSums(300, num, returnArr));
+		System.out.println(HowSums(12, num, returnArr));
 
 	}
 	

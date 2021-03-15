@@ -4,32 +4,34 @@ import java.util.ArrayList;
 
 public class BestSum {
 	static ArrayList <Integer> shortestComb;
+	
 
 	public static void main(String[] args) {
 		ArrayList <Integer> num = new ArrayList <Integer> ();
-		num.add(2);num.add(3);num.add(4);
+		ArrayList <Integer> shortComb = new ArrayList <Integer> ();
+		ArrayList <Integer> comb = new ArrayList <Integer> ();
+		num.add(2);
+		num.add(13);
+		num.add(4);
 		System.out.println(num);
-		System.out.println(BestSums(12, num));
+		System.out.println(BestSums(12, num, shortComb,comb));
 
 	}
 	
-	public static ArrayList <Integer> BestSums(int targetNum, ArrayList <Integer> nums) {
-		if(targetNum == 0) return shortestComb;
+	public static ArrayList <Integer> BestSums(int targetNum, ArrayList <Integer> nums, 
+			      ArrayList <Integer> shortComb, ArrayList <Integer> comb) {
+		if(targetNum == 0) {
+			comb.clear();
+			return shortComb;
+		}
 		if(targetNum < 0) return null;
 		
-		shortestComb = null;
-		
-		ArrayList <Integer> remanderComb;
-		ArrayList<Integer> combination = new ArrayList<Integer>();
 		for(int num: nums) {
-			remanderComb = BestSums((targetNum - num), nums);
-			if(remanderComb != null) {
-				combination.add(num);
-				if(shortestComb == null || combination.size() < shortestComb.size()) {
-					shortestComb = combination;
+			if(BestSums((targetNum - num), nums, shortComb, comb) != null) {
+				comb.add(num);
+				if(shortestComb == null || (comb.size() < shortestComb.size())) {
+					shortestComb = comb;
 				}
-				//System.out.println(r.size());
-			
 			}
 		}
 		return shortestComb;
